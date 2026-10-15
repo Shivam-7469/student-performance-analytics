@@ -2,15 +2,14 @@ import pandas as pd
 import numpy as np
 
 def calculate_total_and_average(df):
-    # Pandas ka use karke total marks calculate karna
+    # total marks using pandas sum function
     df['Total_Marks'] = df[['Maths', 'Physics', 'Chemistry']].sum(axis=1)
     
-    # NumPy ka use karke average calculate karna
+    # Average marks using NumPy
     df['Average'] = np.round(df['Total_Marks'] / 3, 2)
     return df
 
 def assign_grade(average):
-    # Conditions ka use karke grade assign karna
     if average >= 90:
         return 'A'
     elif average >= 75:
@@ -30,7 +29,7 @@ def apply_grades_and_status(df):
     grades = []
     statuses = []
     
-    # Loop ka istemal karke har student ka data process karna
+    # processing each student using loop
     for index, row in df.iterrows():
         grades.append(assign_grade(row['Average']))
         statuses.append(check_pass_fail(row['Average']))
