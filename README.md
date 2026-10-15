@@ -79,4 +79,3 @@ The system can be extended in the future with graphical visualizations, attendan
 **Project Title:** Student Performance Analytics System  
 **Developed By:** SHIVAM  
 **Course:** EWB Courses – Python with AI
-hjnkn
